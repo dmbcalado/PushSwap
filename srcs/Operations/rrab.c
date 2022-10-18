@@ -19,7 +19,7 @@ int rra(t_data *data)
 
 	i = -1;
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = 3;
+	data->step_list[data->steps - 1] = RRA;
 	i= data->argc - 1;
 	while (--i > 0)
 	{
@@ -47,7 +47,7 @@ int rrb(t_data *data)
 	int	nbr;
 
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = 4;
+	data->step_list[data->steps - 1] = RRB;
 	i= data->argc - 1;
 	while (--i > 0)
 	{
@@ -123,7 +123,7 @@ int real_rrb(t_data *data)
 
 int	rrr(t_data *data)
 {
-	//write(1, "rrr\n", 3);
+	write(1, "rrr\n", 3);
 	real_rra(data);
 	real_rrb(data);
 	return (1);

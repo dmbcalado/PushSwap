@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 19:51:39 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/18 00:43:23 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/18 19:27:33 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int real_sa(t_data *data)
 {
 	int	nbr;
 
-	//write(1, "sa\n", 3);
+	write(1, "sa\n", 3);
 	nbr = data->stack_a[0]; 
 	if (data->stack_a[1] != -911818475)
 	{
@@ -60,7 +60,7 @@ int real_sb(t_data *data)
 {
 	int	nbr;
 
-	//write(1, "sb\n", 3);
+	write(1, "sb\n", 3);
 	nbr = data->stack_b[0];
 	if (data->stack_b[1] != -911818475)
 	{
@@ -77,7 +77,7 @@ int ss(t_data *data)
 
 	nbr_a = data->stack_a[0];
 	nbr_b = data->stack_b[0];
-	//write(1, "ss\n", 3);
+	write(1, "ss\n", 3);
 	if (data->stack_a[1] != -911818475)
 	{
 		data->stack_a[0] = data->stack_a[1];

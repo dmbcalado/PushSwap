@@ -28,19 +28,17 @@ int	position(t_data *data, int i)
 	return (posit);
 }
 
-int	ft_atoli(const char *str)
+int	ft_atoli(char *str)
 {
 	int	i;
 	int	menos;
-	int	number;
+	long int	number;
 
 	i = 0;
 	menos = 1;
 	number = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-	{
 		i++;
-	}
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')
@@ -53,5 +51,10 @@ int	ft_atoli(const char *str)
 		number = number * 10 + menos * (str[i] - 48);
 		i++;
 	}
-	return (number);
+	if (number < MIN_INT || number > MAX_INT)
+	{
+		write(2, "Error\n", 6);
+		exit(2);
+	}
+	return ((int)number);
 }

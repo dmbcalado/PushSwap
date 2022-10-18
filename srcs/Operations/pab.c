@@ -19,7 +19,7 @@ int	pa(t_data *data)
 
 	i = -1;
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = -1;
+	data->step_list[data->steps - 1] = PA;
 	nbr = data->pos_b[0];
 	while (++i < data->argc - 2)
 	{
@@ -48,7 +48,7 @@ int	pb(t_data *data)
 
 	i = -1;
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = -2;
+	data->step_list[data->steps - 1] = PB;
 	nbr = data->pos_a[0];
 	while (++i < data->argc - 2)
 	{
@@ -77,7 +77,7 @@ int	real_pb(t_data *data)
 
 	i = -1;
 	nbr = data->stack_a[0];
-	//write(1, "pb\n", 3);
+	write(1, "pb\n", 3);
 	while (++i < data->argc - 2)
 	{
 		if(data->stack_a[i] != -911818475)
@@ -105,7 +105,7 @@ int	real_pa(t_data *data)
 	int	nbr;
 
 	i = -1;
-	//write(1, "pa\n", 3);
+	write(1, "pa\n", 3);
 	nbr = data->stack_b[0];
 	while (++i < data->argc - 2)
 	{

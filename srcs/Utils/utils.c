@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 18:52:31 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/17 21:52:42 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/18 19:31:31 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	calc_margs(t_data *data)
 		data->top_marg = data->argc / 2 + 3;
 	else
 		data->top_marg = data->argc - 1;
-	printf("bot marg: %d\ntop marg: %d\n", data->bot_marg, data->top_marg);
 }
 
 int	in_margs(t_data *data, int nbr)

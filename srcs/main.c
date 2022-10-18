@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:03:14 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/18 00:42:29 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/18 21:20:50 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ void	starting(t_data *data)
 	}
 	new_push_to_b(data);
 	sort_five_a(data);
-	i = -1;
-	printf("after the sorting 5 a:\n\n");
-	while (++i < data->argc - 1)
-		printf("a[%d] :	%d		b[%d] :	%d\n", i, data->pos_a[i], i, data->pos_b[i]);
-	printf("\n\n");
 	algorithm(data);
 }
 
@@ -57,26 +52,21 @@ void	handling_phew_args(t_data *data, int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	int	i;
 	t_data	data;
 
-	i = -1;
 	if (argc >= 7 && check_if_legal(argc, argv) == 0)
 	{
 		initial_allocs(&data, argc, argv);
 		starting(&data);
 		run_operations(&data);
-		i = -1;
-		while(++i < data.argc - 1)
-			printf("a[%d]: %d\n", i, data.stack_a[i]);
 		free_all(&data);
 	}
 	else if (argc >= 3 && check_if_legal(argc, argv) == 0)
 		handling_phew_args(&data, argc, argv);
 	else
 	{
-		printf("Nate Dogg and Warren G have to regulate.\n");
-		exit(0);
+		write(2, "Error\n", 6);
+		exit(2);
 	}
 }
 

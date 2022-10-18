@@ -19,7 +19,7 @@ int ra(t_data *data)
 
 	i = -1;
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = 1;
+	data->step_list[data->steps - 1] = RA;
 	nbr = data->pos_a[0];
 	while (data->pos_a[++i] != 0 &&  i < data->argc - 2)
 	{
@@ -38,7 +38,7 @@ int rb(t_data *data)
 	int	nbr;
 
 	alloc_steplist(data);
-	data->step_list[data->steps - 1] = 2;
+	data->step_list[data->steps - 1] = RB;
 	nbr = data->pos_b[0];
 	i = -1;
 	while (data->pos_b[++i] != 0 &&  i < data->argc - 2)
@@ -88,10 +88,9 @@ int real_rb(t_data *data)
 	return (1);
 }
 
-//needs a flag to do a if on the right of rb and ra
 int	rr(t_data *data)
 {
-	//write(1, "rr\n", 3);
+	write(1, "rr\n", 3);
 	real_ra(data);
 	real_rb(data);
 	return (1);

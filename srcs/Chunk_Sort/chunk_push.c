@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:49:59 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/18 00:35:22 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:10:32 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	sending_top_chuncks(t_data *data)
 	counter = 0;
 	while (counter < 4)
 	{
-		//printf("counter %d\n", counter);
 		if(data->pos_b[0] > data->top_marg + 4 * data->m_top && data->pos_b[0] <= data->top_marg + 4 * (data->m_top + 1))
 		{
 			pa(data);

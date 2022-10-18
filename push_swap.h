@@ -17,6 +17,17 @@
 # include <stdio.h>
 # include <unistd.h>
 
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
+# define PB -2
+# define PA -1
+# define RA  1
+# define RB  2
+# define RRA 3
+# define RRB 4
+# define SA  5
+# define SB  6
+
 typedef struct s_data
 {
 	char	**argv;
@@ -46,8 +57,9 @@ typedef struct s_data
 // -|-|-|-  0 - SAFETIES  -|-|-|-
 
 int		check_if_legal(int argc, char **argv);
-int		check_if_more_then_nbrs(int argc, char **argv);
 int		check_if_repeated(int argc, char **argv);
+int		check_if_more_then_nbrs(int argc, char **argv);
+int		check_if_all_legal_ints(int argc, char **argv);
 int		cont_how_many_equal(char **argv, int i, int j);
 
 // -|-|-|-  1 - OPERATIONS  -|-|-|-
@@ -59,7 +71,7 @@ void	calc_margs(t_data *data);
 int		in_margs(t_data *data, int nbr);
 int		in_smaller_chunks(t_data *data, int m);
 int		next_chunks(int m);
-int		ft_atoli(const char *str);
+int		ft_atoli(char *str);
 int		position(t_data *data, int i);
 int		distance_to_first(t_data *data, int nbr);
 int		distance_to_last(t_data *data, int nbr, int last);
@@ -205,10 +217,10 @@ void	sort_five_a(t_data *data);
 
 int		sending_top_chuncks(t_data *data);
 int		sending_bot_chuncks(t_data *data); //
-int		sort_top_chuncks(t_data *data);
-int		sort_bot_chuncks(t_data *data);
-int		sorting_top(t_data *data);
-int		sorting_bot(t_data *data);
+void	sort_top_chuncks(t_data *data);
+void	sort_bot_chuncks(t_data *data);
+void	sorting_top(t_data *data);
+void	sorting_bot(t_data *data);
 void	gotta_push_them_all(t_data *data);
 
 

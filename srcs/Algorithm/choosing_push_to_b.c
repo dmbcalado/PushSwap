@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:39:33 by ratinhosujo       #+#    #+#             */
-/*   Updated: 2022/10/17 22:16:23 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:21:33 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,19 +56,15 @@ void	push_outsiders_to_b(t_data *data)
 
 	counter_b = data->outsiders_b;
 	counter_t = data->outsiders_t;
-	printf("outsiders bot : %d\n", data->outsiders_b);
-	printf("outsiders top : %d\n", data->outsiders_t);
 	while (counter_t + counter_b > 0)
 	{
 		if (data->pos_a[0] <= data->outsiders_b)
 		{
-			printf("bot pos_a[0] : %d\n", data->pos_a[0]);
 			pb(data);
 			counter_b--;
 		}
 		else if (data->pos_a[0] > data->argc - 1 - data->outsiders_t)
 		{
-			printf("top pos_a[0] : %d\n", data->pos_a[0]);
 			pb(data);
 			counter_t--;
 		}
@@ -85,15 +81,11 @@ void	new_push_to_b(t_data *data)
 	counter = 0;
 	calculate_chunck_nmbrs(data);
 	limit = calculate_limit(data);
-	printf("\n\nhow many to pass: %d\n\n", limit);
 	push_outsiders_to_b(data);
-	printf("\n\ntotal left: %d\n", data->total_left);
 	while (data->total_left > 0)
 	{
-		printf("pos[0]: %d\n", data->pos_a[0]);
 		if (new_in_chunks(data) == 1)
 		{
-			printf("mbot:%d	mtop:%d	total:%d\n", data->m_bot, data->m_top, data->total_left);
 			counter++;
 			pb(data);
 			data->total_left--;
@@ -105,8 +97,6 @@ void	new_push_to_b(t_data *data)
 			data->m_bot--;
 			data->m_top--;
 			limit = calculate_limit(data);
-			printf("\n inside total left: %d \n", data->total_left);
-			printf("mbot : %d	mtop : %d\n", data->m_bot, data->m_top);
 			counter = 0;
 		}
 	}
