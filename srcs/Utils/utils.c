@@ -6,11 +6,11 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 18:52:31 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/18 19:31:31 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 int	lasting(int *list, int argc)
 {

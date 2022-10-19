@@ -6,11 +6,11 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:22:56 by ratinhosujo       #+#    #+#             */
-/*   Updated: 2022/10/16 19:10:42 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../push_swap.h"
+# include "../push_swap.h"
 
 void	initial_allocs(t_data *data, int argc, char **argv)
 {

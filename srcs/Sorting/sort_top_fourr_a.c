@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_top_fourr_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ratinhosujo <ratinhosujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:06:01 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/09 17:04:40 by ratinhosujo      ###   ########.fr       */
+/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 void	sort_top_fourrrrrr_a(t_data *data, int *a)
 {

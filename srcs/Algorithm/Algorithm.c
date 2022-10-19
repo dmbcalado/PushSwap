@@ -6,11 +6,11 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 14:52:12 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/18 19:26:18 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 21:37:47 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 void	algorithm_top(t_data *data)
 {
