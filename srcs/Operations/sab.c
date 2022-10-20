@@ -6,13 +6,13 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 19:51:39 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:34:55 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int sa(t_data *data)
+int	sa(t_data *data)
 {
 	int	nbr;
 
@@ -27,7 +27,7 @@ int sa(t_data *data)
 	return (1);
 }
 
-int sb(t_data *data)
+int	sb(t_data *data)
 {
 	int	nbr;
 
@@ -42,12 +42,12 @@ int sb(t_data *data)
 	return (1);
 }
 
-int real_sa(t_data *data)
+int	real_sa(t_data *data)
 {
 	int	nbr;
 
 	write(1, "sa\n", 3);
-	nbr = data->stack_a[0]; 
+	nbr = data->stack_a[0];
 	if (data->stack_a[1] != -911818475)
 	{
 		data->stack_a[0] = data->stack_a[1];
@@ -56,7 +56,7 @@ int real_sa(t_data *data)
 	return (1);
 }
 
-int real_sb(t_data *data)
+int	real_sb(t_data *data)
 {
 	int	nbr;
 
@@ -70,7 +70,7 @@ int real_sb(t_data *data)
 	return (1);
 }
 
-int ss(t_data *data)
+int	ss(t_data *data)
 {
 	int	nbr_a;
 	int	nbr_b;

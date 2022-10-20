@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 16:59:42 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:08:10 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	run_operations_five(t_data *data, int i)
 			i += 2;
 			rrr(data);
 		}
-		else if (i + 2 < data->steps && data->step_list[i + 1] == SA && data->step_list[i + 2] == RRB)
+		else if (i + 2 < data->steps && data->step_list[i + 1] == SA && \
+		data->step_list[i + 2] == RRB)
 		{
 			real_sa(data);
 			rrr(data);

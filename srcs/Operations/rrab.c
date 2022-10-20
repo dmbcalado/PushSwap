@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-int rra(t_data *data)
+int	rra(t_data *data)
 {
 	int	i;
 	int	nbr;
@@ -20,7 +20,7 @@ int rra(t_data *data)
 	i = -1;
 	alloc_steplist(data);
 	data->step_list[data->steps - 1] = RRA;
-	i= data->argc - 1;
+	i = data->argc - 1;
 	while (--i > 0)
 	{
 		if (data->pos_a[i] != 0)
@@ -32,7 +32,7 @@ int rra(t_data *data)
 	i++;
 	while (--i > 0)
 	{
-		if(data->pos_a[i - 1] != 0)
+		if (data->pos_a[i - 1] != 0)
 			data->pos_a[i] = data->pos_a[i - 1];
 		else
 			continue ;
@@ -41,14 +41,14 @@ int rra(t_data *data)
 	return (1);
 }
 
-int rrb(t_data *data)
+int	rrb(t_data *data)
 {
 	int	i;
 	int	nbr;
 
 	alloc_steplist(data);
 	data->step_list[data->steps - 1] = RRB;
-	i= data->argc - 1;
+	i = data->argc - 1;
 	while (--i > 0)
 	{
 		if (data->pos_b[i] != 0)
@@ -60,8 +60,8 @@ int rrb(t_data *data)
 	i++;
 	while (--i > 0)
 	{
-		if(data->pos_b[i - 1] != 0)
-			data->pos_b[i]= data->pos_b[i - 1];
+		if (data->pos_b[i - 1] != 0)
+			data->pos_b[i] = data->pos_b[i - 1];
 		else
 			continue ;
 	}
@@ -69,12 +69,12 @@ int rrb(t_data *data)
 	return (1);
 }
 
-int real_rra(t_data *data)
+int	real_rra(t_data *data)
 {
 	int	i;
 	int	nbr;
 
-	i= data->argc - 1;
+	i = data->argc - 1;
 	while (--i > 0)
 	{
 		if (data->stack_a[i] != -911818475)
@@ -86,7 +86,7 @@ int real_rra(t_data *data)
 	i++;
 	while (--i > 0)
 	{
-		if(data->stack_a[i - 1] != -911818475)
+		if (data->stack_a[i - 1] != -911818475)
 			data->stack_a[i] = data->stack_a[i - 1];
 		else
 			continue ;
@@ -95,12 +95,12 @@ int real_rra(t_data *data)
 	return (1);
 }
 
-int real_rrb(t_data *data)
+int	real_rrb(t_data *data)
 {
 	int	i;
 	int	nbr;
 
-	i= data->argc - 1;
+	i = data->argc - 1;
 	while (--i > 0)
 	{
 		if (data->stack_b[i] != -911818475)
@@ -112,7 +112,7 @@ int real_rrb(t_data *data)
 	i++;
 	while (--i > 0)
 	{
-		if(data->stack_b[i - 1] != -911818475)
+		if (data->stack_b[i - 1] != -911818475)
 			data->stack_b[i] = data->stack_b[i - 1];
 		else
 			continue ;

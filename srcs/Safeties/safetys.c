@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:55:11 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/20 01:28:33 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:35:39 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_if_more_then_nbrs(int argc, char **argv)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	while (++i < argc)
 	{
@@ -51,7 +51,7 @@ int	check_if_repeated(int argc, char **argv)
 	int	i;
 	int	j;
 	int	k;
-	
+
 	i = 0;
 	while (++i < argc - 1)
 	{
@@ -71,7 +71,7 @@ int	check_if_repeated(int argc, char **argv)
 int	check_if_all_legal_ints(int argc, char **argv)
 {
 	int	i;
-	
+
 	i = 0;
 	while (++i < argc)
 		ft_atoli(argv[i]);
@@ -80,16 +80,16 @@ int	check_if_all_legal_ints(int argc, char **argv)
 
 int	cont_how_many_equal(char **argv, int i, int j)
 {
-	int k;
+	int	k;
 
 	k = -1;
-	while(argv[i][++k])
+	while (argv[i][++k])
 	{
 		if (argv[i][k] != argv[j][k])
 			return (0);
 	}
 	k = -1;
-	while(argv[j][++k])
+	while (argv[j][++k])
 	{
 		if (argv[j][k] != argv[i][k])
 			return (0);

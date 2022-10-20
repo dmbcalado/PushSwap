@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:37:38 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 22:23:27 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:40:53 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,10 @@ void	sort_fourrrrrr_a(t_data *data, int *a)
 		ra(data);
 		sa(data);
 	}
-	else if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] &&  a[0] > a[3])
+	else if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] > a[3])
 		ra(data);
-	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3] && a[1] < a[3])
+	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3] && \
+	a[1] < a[3])
 	{
 		ra(data);
 		sa(data);
@@ -59,14 +60,15 @@ void	sort_fourrrrrr_a(t_data *data, int *a)
 
 void	sort_fourrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] &&  a[0] > a[2])
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] && a[0] > a[2])
 	{
 		rra(data);
 		sa(data);
 		ra(data);
 		sa(data);
 	}
-	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3] && a[1] > a[3])
+	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3] && \
+	a[1] > a[3])
 	{
 		sa(data);
 		ra(data);
@@ -85,7 +87,8 @@ void	sort_fourrrrrrr_a(t_data *data, int *a)
 
 void	sort_fourrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] &&  a[0] > a[2])
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] && \
+	a[0] > a[2])
 	{
 		rra(data);
 		sa(data);

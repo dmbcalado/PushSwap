@@ -28,10 +28,19 @@ int	position(t_data *data, int i)
 	return (posit);
 }
 
+void	check_atoli(long int number)
+{
+	if (number < MIN_INT || number > MAX_INT)
+	{
+		write(2, "Error\n", 6);
+		exit(2);
+	}
+}
+
 int	ft_atoli(char *str)
 {
-	int	i;
-	int	menos;
+	int			i;
+	int			menos;
 	long int	number;
 
 	i = 0;
@@ -51,10 +60,6 @@ int	ft_atoli(char *str)
 		number = number * 10 + menos * (str[i] - 48);
 		i++;
 	}
-	if (number < MIN_INT || number > MAX_INT)
-	{
-		write(2, "Error\n", 6);
-		exit(2);
-	}
+	check_atoli(number);
 	return ((int)number);
 }

@@ -74,6 +74,7 @@ void	initial_allocs(t_data *data, int argc, char **argv);
 // ------------  2.1 - MARGES & DISTANCES -----
 
 int		ft_atoli(char *str);
+void	check_atoli(long int number);
 void	calc_margs(t_data *data);
 int		in_margs(t_data *data, int nbr);
 int		position(t_data *data, int i);
@@ -185,7 +186,10 @@ int		find_bigger(t_data *data);
 int		sending_top_chuncks(t_data *data);
 int		sending_bot_chuncks(t_data *data); //
 void	sort_top_chuncks(t_data *data);
+void	sort_top_chunckss(t_data *data);
+void	sort_top_chuncksss(t_data *data);
 void	sort_bot_chuncks(t_data *data);
+void	sort_bot_chunckss(t_data *data);
 void	sorting_top(t_data *data);
 void	sorting_bot(t_data *data);
 void	gotta_push_them_all(t_data *data);

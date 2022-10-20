@@ -6,11 +6,11 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:22:56 by ratinhosujo       #+#    #+#             */
-/*   Updated: 2022/10/19 22:18:34 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:09:40 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 void	initial_allocs(t_data *data, int argc, char **argv)
 {
@@ -23,7 +23,7 @@ void	initial_allocs(t_data *data, int argc, char **argv)
 	data->step_list = NULL;
 	allocations(data);
 	i = -1;
-	while(++i < data->argc - 1)
+	while (++i < data->argc - 1)
 			data->stack_b[i] = -911818475;
 	i = -1;
 	while (++i < data->argc - 1)
@@ -36,8 +36,8 @@ void	allocations(t_data *data)
 	data->pos_b = malloc((data->argc - 1) * sizeof(int));
 	data->stack_a = malloc((data->argc - 1) * sizeof(int));
 	data->stack_b = malloc((data->argc - 1) * sizeof(int));
-	if(data->pos_a == NULL || data->pos_b == NULL || data->stack_a == NULL ||\
-	data->stack_b == NULL)
+	if (data->pos_a == NULL || data->pos_b == NULL || data->stack_a == NULL \
+	|| data->stack_b == NULL)
 	{
 		write(2, "Error\n", 6);
 		exit(2);
@@ -51,17 +51,17 @@ void	alloc_steplist(t_data *data)
 
 	data->steps++;
 	new_stepl = (int *)malloc((data->steps) * sizeof(int));
-	if(new_stepl == NULL)
+	if (new_stepl == NULL)
 	{
 		write(2, "Error\n", 6);
 		exit(2);
 	}
-	if(data->step_list != NULL)
+	if (data->step_list != NULL)
 	{
 		i = -1;
 		while (++i < data->steps - 1)
 			new_stepl[i] = data->step_list[i];
-		free(data->step_list);
+		free (data->step_list);
 	}
 	data->step_list = new_stepl;
 }

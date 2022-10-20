@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:49:59 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/20 01:48:07 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:12:06 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	sending_top_chuncks(t_data *data)
 	counter = 0;
 	while (counter < 4)
 	{
-		if(data->pos_b[0] > data->top_marg + 4 * data->m_top && data->pos_b[0]\
-		<= data->top_marg + 4 * (data->m_top + 1))
+		if (data->pos_b[0] > data->top_marg + 4 * data->m_top && \
+		data->pos_b[0] <= data->top_marg + 4 * (data->m_top + 1))
 		{
 			pa(data);
 			counter++;
@@ -33,7 +33,7 @@ int	sending_top_chuncks(t_data *data)
 			rb_counter++;
 		}
 	}
-	while(--rb_counter > 0)
+	while (--rb_counter > 0)
 		rrb(data);
 	return (counter);
 }
@@ -47,8 +47,8 @@ int	sending_bot_chuncks(t_data *data)
 	rb_counter = 1;
 	while (counter < 4)
 	{
-		if (data->pos_b[0] < data->bot_marg - 4 * data->m_bot && data->pos_b[0]\
-		>= data->bot_marg - 4 * (data->m_bot + 1))
+		if (data->pos_b[0] < data->bot_marg - 4 * data->m_bot && \
+		data->pos_b[0] >= data->bot_marg - 4 * (data->m_bot + 1))
 		{
 			pa(data);
 			counter++;
@@ -59,7 +59,7 @@ int	sending_bot_chuncks(t_data *data)
 			rb_counter++;
 		}
 	}
-	while(--rb_counter > 0)
+	while (--rb_counter > 0)
 		rrb(data);
 	return (counter);
 }
@@ -68,7 +68,7 @@ void	gotta_push_them_all(t_data *data)
 {
 	int	i;
 
-	i= 0;
-	while(++i <= 4)
+	i = 0;
+	while (++i <= 4)
 		ra(data);
 }

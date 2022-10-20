@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:32:11 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/20 02:03:18 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:06:56 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,17 @@ int	in_interest_chunks(t_data *data)
 	{
 		if (data->m_bot > 0)
 		{
-			if (data->pos_a[0] < data->bot_marg - data->chunck_size\
-			* (data->m_bot - 1) && data->pos_a[0] >= data->bot_marg\
+			if (data->pos_a[0] < data->bot_marg - data->chunck_size \
+			* (data->m_bot - 1) && data->pos_a[0] >= data->bot_marg \
 			- data->chunck_size * data->m_bot)
 				return (1);
 		}
 		if (data->m_top > 0)
 		{
-			if (data->pos_a[0] > data->top_marg + data->chunck_size\
-			* (data->m_top - 1) && data->pos_a[0] <= data->top_marg\
+			if (data->pos_a[0] > data->top_marg + data->chunck_size \
+			* (data->m_top - 1) && data->pos_a[0] <= data->top_marg \
 			+ data->chunck_size * data->m_top)
-			return (1);
+				return (1);
 		}
 	}
 	return (0);

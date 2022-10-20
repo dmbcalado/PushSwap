@@ -23,7 +23,7 @@ int	pa(t_data *data)
 	nbr = data->pos_b[0];
 	while (++i < data->argc - 2)
 	{
-		if(data->pos_b[i] != 0)
+		if (data->pos_b[i] != 0)
 			data->pos_b[i] = data->pos_b[i + 1];
 		else
 			break ;
@@ -32,8 +32,8 @@ int	pa(t_data *data)
 	i = data->argc - 1;
 	while (--i > 0)
 	{
-		if(data->pos_a[i - 1] != 0)
-			data->pos_a[i]= data->pos_a[i - 1];
+		if (data->pos_a[i - 1] != 0)
+			data->pos_a[i] = data->pos_a[i - 1];
 		else
 			continue ;
 	}
@@ -52,7 +52,7 @@ int	pb(t_data *data)
 	nbr = data->pos_a[0];
 	while (++i < data->argc - 2)
 	{
-		if(data->pos_a[i] != 0)
+		if (data->pos_a[i] != 0)
 			data->pos_a[i] = data->pos_a[i + 1];
 		else
 			break ;
@@ -61,7 +61,7 @@ int	pb(t_data *data)
 	i = data->argc - 1;
 	while (--i > 0)
 	{
-		if(data->pos_b[i - 1] != 0)
+		if (data->pos_b[i - 1] != 0)
 			data->pos_b[i] = data->pos_b[i - 1];
 		else
 			continue ;
@@ -80,7 +80,7 @@ int	real_pb(t_data *data)
 	write(1, "pb\n", 3);
 	while (++i < data->argc - 2)
 	{
-		if(data->stack_a[i] != -911818475)
+		if (data->stack_a[i] != -911818475)
 			data->stack_a[i] = data->stack_a[i + 1];
 		else
 			break ;
@@ -89,7 +89,7 @@ int	real_pb(t_data *data)
 	i = data->argc - 1;
 	while (--i > 0)
 	{
-		if(data->stack_b[i - 1] != -911818475)
+		if (data->stack_b[i - 1] != -911818475)
 			data->stack_b[i] = data->stack_b[i - 1];
 		else
 			continue ;
@@ -97,7 +97,6 @@ int	real_pb(t_data *data)
 	data->stack_b[0] = nbr;
 	return (1);
 }
-
 
 int	real_pa(t_data *data)
 {
@@ -109,7 +108,7 @@ int	real_pa(t_data *data)
 	nbr = data->stack_b[0];
 	while (++i < data->argc - 2)
 	{
-		if(data->stack_b[i] != -911818475)
+		if (data->stack_b[i] != -911818475)
 			data->stack_b[i] = data->stack_b[i + 1];
 		else
 			break ;
@@ -118,8 +117,8 @@ int	real_pa(t_data *data)
 	i = data->argc - 1;
 	while (--i > 0)
 	{
-		if(data->stack_a[i - 1] != -911818475)
-			data->stack_a[i]= data->stack_a[i - 1];
+		if (data->stack_a[i - 1] != -911818475)
+			data->stack_a[i] = data->stack_a[i - 1];
 		else
 			continue ;
 	}

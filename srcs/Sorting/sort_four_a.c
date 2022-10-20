@@ -12,9 +12,8 @@
 
 #include "../push_swap.h"
 
-void	sort_four_a(t_data *data , int *a)
+void	sort_four_a(t_data *data, int *a)
 {
-
 	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] < a[3] && a[0] < a[2])
 	{
 		ra(data);
@@ -40,7 +39,8 @@ void	sort_fourr_a(t_data *data, int *a)
 		sa(data);
 		ra(data);
 	}
-	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] && a[0] < a[3])
+	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] && \
+	a[0] < a[3])
 	{
 		rra(data);
 		sa(data);
@@ -85,7 +85,8 @@ void	sort_fourrr_a(t_data *data, int *a)
 
 void	sort_fourrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3]  && a[0] < a[3])
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3] && \
+	a[0] < a[3])
 	{
 		sa(data);
 		ra(data);

@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 18:52:31 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/20 01:04:14 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:45:15 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	calc_margs(t_data *data)
 {
 	data->bot_marg = data->argc / 2 - 2;
-	if(data->argc / 2 + 2 < data->argc - 1)
+	if (data->argc / 2 + 2 < data->argc - 1)
 		data->top_marg = data->argc / 2 + 2;
 	else
 		data->top_marg = data->argc - 1;

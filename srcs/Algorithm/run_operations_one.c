@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:00:00 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 20:36:22 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:07:43 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	run_operations(t_data *data)
 		}
 		else if (data->step_list[i] == PA)
 		{
-			i++;	
+			i++;
 			real_pa(data);
 		}
 		else
@@ -46,7 +46,8 @@ int	run_operations_two(t_data *data, int i)
 			i += 2;
 			rr(data);
 		}
-		else if (i + 2 < data->steps && data->step_list[i + 1] == SB && data->step_list[i + 2] == RB)
+		else if (i + 2 < data->steps && data->step_list[i + 1] == SB \
+		&& data->step_list[i + 2] == RB)
 		{
 			real_sb(data);
 			rr(data);
@@ -73,7 +74,8 @@ int	run_operations_three(t_data *data, int i)
 			rr(data);
 			i += 2;
 		}
-		else if (i + 2 < data->steps && data->step_list[i + 1] == SA && data->step_list[i + 2] == RA)
+		else if (i + 2 < data->steps && data->step_list[i + 1] == SA && \
+		data->step_list[i + 2] == RA)
 		{
 			real_sa(data);
 			rr(data);
@@ -100,7 +102,8 @@ int	run_operations_four(t_data *data, int i)
 			rrr(data);
 			i += 2;
 		}
-		else if (i + 2 < data->steps && data->step_list[i + 1] == SB && data->step_list[i + 2] == RRB)
+		else if (i + 2 < data->steps && data->step_list[i + 1] == SB && \
+		data->step_list[i + 2] == RRB)
 		{
 			real_sb(data);
 			rrr(data);

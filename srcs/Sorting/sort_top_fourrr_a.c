@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 19:32:56 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 22:25:40 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:43:59 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	sort_top_fourrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] &&  a[0] > a[3])
+	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] > a[3])
 	{
 		pb(data);
 		ra(data);
@@ -83,7 +83,8 @@ void	sort_top_fourrrrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] &&  a[0] > a[2])
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] \
+	&& a[0] > a[2])
 	{
 		pb(data);
 		ra(data);
@@ -97,4 +98,3 @@ void	sort_top_fourrrrrrrrrrrrrr_a(t_data *data, int *a)
 	else
 		sort_top_fourrrrrrrrrrrrrrr_a(data, a);
 }
-

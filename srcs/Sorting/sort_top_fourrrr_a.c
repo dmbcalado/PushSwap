@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 23:48:58 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 22:24:59 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 02:44:29 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void	ssort_top_fourrrrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sssort_top_fourrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] &&  a[0] > a[2])
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] \
+	&& a[0] > a[2])
 	{
 		sa(data);
 		pb(data);
