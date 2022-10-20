@@ -1,5 +1,0 @@
-correr:
-
-./push_swap 7 4 3 5 1 2 6 8 12 32 63 14 -3
-
--> esqueceu-se do ultimo pb
