@@ -44,8 +44,10 @@ void	handling_phew_args(t_data *data, int argc, char **argv)
 		sort_four_a(data, data->pos_a);
 	else if (data->argc == 4)
 		sort_three_a(data, data->pos_a);
-	else
+	else if (data->argc == 3)
 		sort_two_a(data);
+	else
+		exit(0);
 	run_operations(data);
 	free_all(data);
 }
@@ -61,7 +63,7 @@ int	main(int argc, char **argv)
 		run_operations(&data);
 		free_all(&data);
 	}
-	else if (argc >= 3 && check_if_legal(argc, argv) == 0)
+	else if (argc >= 2 && check_if_legal(argc, argv) == 0)
 		handling_phew_args(&data, argc, argv);
 	else
 	{
@@ -69,5 +71,3 @@ int	main(int argc, char **argv)
 		exit(2);
 	}
 }
-
-

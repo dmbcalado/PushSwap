@@ -14,11 +14,10 @@
 
 void	sort_three_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[0] < a[2])
+	if (a[0] < a[1] && a[1] > a[2] && a[0] < a[2]) // 1 3 2
 	{
-		ra(data);
 		sa(data);
-		rra(data);
+		ra(data);
 	}
 	else if (a[0] > a[1] && a[1] < a[2] && a[0] < a[2])
 		sa(data);

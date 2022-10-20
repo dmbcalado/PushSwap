@@ -48,18 +48,42 @@ int	ft_atoli(char *str)
 	number = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	if (str[i] == '+')
+	if (check_chungaria(str, i, &menos) != i)
 		i++;
-	else if (str[i] == '-')
-	{
-		menos = -1;
-		i++;
-	}
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		number = number * 10 + menos * (str[i] - 48);
 		i++;
 	}
+	if (str[i] != 0)
+	{
+		write(2, "Error\n", 6);
+		exit(2);
+	}
 	check_atoli(number);
 	return ((int)number);
+}
+
+int	check_chungaria(char *str, int i, int *menos)
+{
+	if (str[i] == '+')
+	{
+		if (str[i + 1] < 48 || str[i + 1] > 57)
+		{
+			write(2, "Error\n", 6);
+			exit(2);
+		}
+		i++;
+	}
+	else if (str[i] == '-')
+	{
+		*menos = -1;
+		if (str[i + 1] < 48 || str[i + 1] > 57)
+		{
+			write(2, "Error\n", 6);
+			exit(2);
+		}
+		i++;
+	}
+	return (i);
 }

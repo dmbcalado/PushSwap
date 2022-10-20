@@ -56,6 +56,7 @@ typedef struct s_data
 
 // -|-|-|-  0 - SAFETIES  -|-|-|-
 
+int		check_chungaria(char *str, int i, int *menos);
 int		check_if_legal(int argc, char **argv);
 int		check_if_repeated(int argc, char **argv);
 int		check_if_more_then_nbrs(int argc, char **argv);
