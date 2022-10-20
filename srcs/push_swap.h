@@ -194,7 +194,6 @@ void	sorting_top(t_data *data);
 void	sorting_bot(t_data *data);
 void	gotta_push_them_all(t_data *data);
 
-
 //-@@|@@-^^%%		LAST STEP:		%%^^-@@|@@-
 // 		  		  THE ALGORITHM
 
