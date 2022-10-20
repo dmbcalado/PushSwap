@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:06:01 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 22:24:13 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	sort_top_four_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] < a[3] && a[0] < a[2]) // caso 1 3 2 4 5 7 8
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] < a[3] && a[0] < a[2])
 	{
 		ra(data);
 		sa(data);
 		rra(data);
 	}
-	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3]) // caso 1 2 4 3 5 9 12 4 3 21 1
+	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3])
 	{
 		ra(data);
 		ra(data);
@@ -34,7 +34,7 @@ void	sort_top_four_a(t_data *data, int *a)
 
 void	sort_top_fourr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3] && a[2] > a[0]) // caso 1 4 2 3 5
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3] && a[2] > a[0])
 	{
 		ra(data);
 		sa(data);
@@ -43,7 +43,7 @@ void	sort_top_fourr_a(t_data *data, int *a)
 		rra(data);
 		rra(data);
 	}
-	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] && a[0] < a[3]) // caso 1 3 4 2 5
+	else if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[1] > a[3] && a[0] < a[3])
 	{
 		ra(data);
 		ra(data);
@@ -58,14 +58,14 @@ void	sort_top_fourr_a(t_data *data, int *a)
 
 void	sort_top_fourrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] < a[3] && a[0] > a[2]) // caso 2 3 1 4 5
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] < a[3] && a[0] > a[2])
 	{
 		ra(data);
 		sa(data);
 		rra(data);
 		sa(data);
 	}
-	else if (a[0] < a[1] && a[1] > a[2] && a[2] > a[3] && a[3] > a[0]) // caso 1 4 3 2 5
+	else if (a[0] < a[1] && a[1] > a[2] && a[2] > a[3] && a[3] > a[0])
 	{
 		ra(data);
 		sa(data);
@@ -75,7 +75,7 @@ void	sort_top_fourrr_a(t_data *data, int *a)
 		sa(data);
 		rra(data);
 	}
-	else if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] < a[2]) // caso 2 1 3 4 5
+	else if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] < a[2])
 		sa(data);
 	else
 		sort_top_fourrrr_a(data, a);
@@ -83,7 +83,7 @@ void	sort_top_fourrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3]  && a[2] < a[1] && a[0] < a[3]) // caso 2 4 1 3 5
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[1] > a[3]  && a[2] < a[1] && a[0] < a[3])
 	{
 		ra(data);
 		sa(data);
@@ -93,7 +93,7 @@ void	sort_top_fourrrr_a(t_data *data, int *a)
 		rra(data);
 		sa(data);
 	}
-	else if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[3]) // caso 2 1 4 3 5
+	else if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[3])
 	{
 		ra(data);
 		ra(data);
@@ -108,7 +108,7 @@ void	sort_top_fourrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[2] && a[1] < a[3]) // caso 3 1 4 2 5
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[2] && a[1] < a[3])
 	{
 		sa(data);
 		ra(data);

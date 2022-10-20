@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:03:14 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 20:35:04 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 01:57:11 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	starting(t_data *data)
 		data->pos_a[i] = position(data, i);
 		data->pos_b[i] = 0;
 	}
-	new_push_to_b(data);
+	push_to_b(data);
 	sort_five_a(data);
 	algorithm(data);
 }
@@ -40,9 +40,9 @@ void	handling_phew_args(t_data *data, int argc, char **argv)
 	}
 	if (data->argc == 6)
 		sort_five_a(data);
-	else if(data->argc == 5)
+	else if (data->argc == 5)
 		sort_four_a(data, data->pos_a);
-	else if(data->argc == 4)
+	else if (data->argc == 4)
 		sort_three_a(data, data->pos_a);
 	else
 		sort_two_a(data);
@@ -70,11 +70,4 @@ int	main(int argc, char **argv)
 	}
 }
 
-void	free_all(t_data *data)
-{
-	free(data->pos_a);
-	free(data->pos_b);
-	free(data->stack_a);
-	free(data->stack_b);
-	free(data->step_list);
-}
+

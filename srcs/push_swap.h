@@ -62,23 +62,23 @@ int		check_if_more_then_nbrs(int argc, char **argv);
 int		check_if_all_legal_ints(int argc, char **argv);
 int		cont_how_many_equal(char **argv, int i, int j);
 
-// -|-|-|-  1 - OPERATIONS  -|-|-|-
+// -|-|-|-  1 - ALLOCATIONS & FREES -|-|-|-
 
-// ------------  1.1 - MARGES & DISTANCES -----
+void	free_all(t_data *data);
+void	allocations(t_data *data);
+void	alloc_steplist(t_data *data);
+void	initial_allocs(t_data *data, int argc, char **argv);
 
-int		lasting(int *list, int argc);
+// -|-|-|-  2 - OPERATIONS  -|-|-|-
+
+// ------------  2.1 - MARGES & DISTANCES -----
+
+int		ft_atoli(char *str);
 void	calc_margs(t_data *data);
 int		in_margs(t_data *data, int nbr);
-int		in_smaller_chunks(t_data *data, int m);
-int		next_chunks(int m);
-int		ft_atoli(char *str);
 int		position(t_data *data, int i);
-int		distance_to_first(t_data *data, int nbr);
-int		distance_to_last(t_data *data, int nbr, int last);
-int		set_distance(t_data *data);
-int		counting_leftovers(int *pos_a, int *store);
-int		how_many_to_pass(t_data *data, int m);
-// ------------  1.1 - RS RRS  ----------------
+
+// ------------  2.1 - RS RRS  ----------------
 
 int		ra(t_data *data);
 int		rb(t_data *data);
@@ -91,34 +91,26 @@ int		real_rrb(t_data *data);
 int		rrb(t_data *data);
 int		rrr(t_data *data);
 
-// ------------  1.2 - PUSHS   ----------------
+// ------------  2.2 - PUSHS   ----------------
 
 int		pa(t_data *data);
 int		pb(t_data *data);
 int		real_pa(t_data *data);
 int		real_pb(t_data *data);
 
-// ------------  1.3 - SWAPS   ----------------
+// ------------  2.3 - SWAPS   ----------------
 
-int		real_sa(t_data *data);
-int		real_sb(t_data *data);
 int		sa(t_data *data);
 int		sb(t_data *data);
 int		ss(t_data *data);
+int		real_sa(t_data *data);
+int		real_sb(t_data *data);
 
-// -|-|-|-  2 - SORTING FUNCTIONS  -|-|-|-
-// ------------  2.0 - SORTING TWO  -----------
+// -|-|-|-  3 - SORTING FUNCTIONS  -|-|-|-
+// ------------  3.0 - SORTING -----------
 
 void	sort_two_a(t_data *data);
-void	sort_two_b(t_data *data);
-void	sort_rev_two_b(t_data *data);
-
-// ------------  2.1 - SORTING THREE  ---------
-
 void	sort_three_a(t_data *data, int *a);
-void	sort_three_b(t_data *data, int *b);
-
-// ------------  2.2 - SORTING FOUR  ----------
 void	sort_four_a(t_data *data, int *a);
 void	sort_fourr_a(t_data *data, int *a);
 void	sort_fourrr_a(t_data *data, int *a);
@@ -128,15 +120,10 @@ void	sort_fourrrrrr_a(t_data *data, int *a);
 void	sort_fourrrrrrr_a(t_data *data, int *a);
 void	sort_fourrrrrrrr_a(t_data *data, int *a);
 
-// ------------  2.3 - SORTING TOP THREE  ---------
+// ------------ 2.3 - SORTING "TOP" as in top of the stack ---------
 
 void	sort_top_three_a(t_data *data, int *a);
 void	sort_top_threee_a(t_data *data, int *a);
-void	sort_rev_top_three_b(t_data *data, int *b);
-void	sort_rev_top_threee_b(t_data *data, int *b);
-
-// ------------  2.4 - SORTING TOP FOUR  ----------
-
 void	sort_top_four_a(t_data *data, int *a);
 void	sort_top_fourr_a(t_data *data, int *a);
 void	sort_top_fourrr_a(t_data *data, int *a);
@@ -155,23 +142,6 @@ void	sort_top_fourrrrrrrrrrrrrrr_a(t_data *data, int *a);
 void	ssort_top_fourrrrrrrrrrrrr_a(t_data *data, int *a);
 void	sssort_top_fourrrrrrrrrrr_a(t_data *data, int *a);
 
-
-// -|-|-|-	4 - TESTING FUNCTIONS	-|-|-|-
-// --------  4.0 - TESTING SORTING FUNCTIONS  ---------
-
-int		**sample_generator(int **pseudo_a , int n);
-int		**samples_generator(int **pseudo_a , int n);
-int		**samples_gen(int **pseudo_a , int n);
-int		**samples_gen_three(int **pseudo_a , int n);
-void	testing_if_ok(int **pseudo_a, int n);
-void	testing_if_okk(int **pseudo_a, int n);
-void	testing_if_ko(int **pseudo_a, int n);
-void	testing_if_ko_three(int **pseudo_a, int n);
-void	testing_sort_three(int **pseudo_a, int total_samples);
-void	testing_sort_four(int **pseudo_a, int total_samples);
-void	testing_sort_top_three(int **pseudo_a, int total_samples);
-void	testing_sort_top(int **pseudo_a, int **pseudo_b, int total_samples);
-
 //_________________________________________________________________
 
 //%%-@@-|-@@-|-@@-^^%%		ALGORITHM		%%^^-@@-|-@@-|-@@-|-@@-%%
@@ -180,37 +150,34 @@ void	testing_sort_top(int **pseudo_a, int **pseudo_b, int total_samples);
 //_________________________________________________________________
 
 //_________________________________________________________________
-// \-@@-@@-|^^%%&&&&#£	 !! FIRST PART !!		£#&&&&%%^^|-@@-@@-/
-// 	    BY WORKING WITH THE TRUE POSITIONS OF EACH NUMBER
+//	\-@@-@@-|^^%%&&&&#£	 !! FIRST PART !!		£#&&&&%%^^|-@@-@@-/
+// 	    BY WORKING WITH THE FINAL POSITIONS OF EACH NUMBER
 //	   GET THE STEPS NEEDED TO SORT THE TRUE A AND B STACKS
 //	   STORING THEM WITH AN INDEX: 
-//	   -2: PB	-1: PA	 1: RA	 2: RB	 3: RR	   4: RRA	 5: RRB
-//					6: RRR	 7: SA	 8: SB	 9: SS
+//	   PB  = -2  PA  = -1
+//	   RA  =  1  RB  =  2
+//	   RRA =  3  RRB =  4
+//	   SA  =  5  SB  =  6
+//	   AND WHILE REPLAYING THE STEPS ON THE TRUE STACKS, 
+//	   FINDING THE MOST COMMON TIMES ITS LEGAL TO USE RR & RRR.
 
-//-@@|@@-^^%%		1ST STEP:		%%^^-@@|@@-
-//	  PUSH ALL ELEMENTS BESIDES MID 5 TO B.
-//  BUT PUSH THEM SELECTIVELY TO FORM THE CHUNCKS
+//	-@@|@@-^^%%		1ST STEP:		%%^^-@@|@@-
+//	    PUSH ALL ELEMENTS BESIDES MID 5 TO B.
+//	   BUT PUSH THEM SELECTIVELY TO HELP FORMING THE CHUNCKS
 
-void	handling_phew_args(t_data *data, int argc, char **argv);
-int		new_in_chunks(t_data *data);
-int		new_in_smaller_chunks(t_data *data);
 int		calculate_limit(t_data *data);
-void	push_outsiders_to_b(t_data *data);
+int		in_interest_chunks(t_data *data);
+int		in_smaller_chunks(t_data *data);
+int		even_smaller_chunks(t_data *data);
 void	calculate_chunck_nmbrs(t_data *data);
-void	new_push_to_b(t_data *data);
-
-void	choosing_how_to_start(t_data *data);
+void	calculate_smaller_nmbrs(t_data *data);
 void	push_to_b(t_data *data);
-int		pushing_selectively(t_data *data, int m);
-int		sort_next_to_b(t_data *data, int m);
-void	initial_allocs(t_data *data, int argc, char **argv);
-
 
 //-@@|@@-^^%%		2ND STEP:		£#&&&&%%^^-@@|@@-
 //					 SORT A
 
-int		find_bigger(int *a, int argc);
 void	sort_five_a(t_data *data);
+int		find_bigger(t_data *data);
 
 //-@@|@@-^^%%		3RD STEP:		%%^^-@@|@@-
 // 		  SENDING AND SORTING CHUNCKS
@@ -228,19 +195,19 @@ void	gotta_push_them_all(t_data *data);
 // 		  		  THE ALGORITHM
 
 // @@@@@@@   CHOOSING WICH ALGORITM TO RUN   @@@@@@@
+
 int		choosing_t_or_b(t_data *data);
-int		choosing_smaller(t_data *data);
 int		choosing_top_or_bot(t_data *data);
-int	choosing_even_smaller(t_data *data);
 
 // @@@@@@@	ALGORITHMS TO TOP AND BOT CHUNKS	@@@@@@@
+
 void	algorithm_top(t_data *data);
 void	algorithm_bot(t_data *data);
 
 // @@@@@@@@@@@@##|	MAIN ALGORITHM	|##@@@@@@@@@@@@@
 
 void	starting(t_data *data);
-void	alloc_steplist(t_data *data);
+
 void	algorithm(t_data *data);
 void	first_part(t_data *data);
 void	second_part(t_data *data);
@@ -250,5 +217,6 @@ int		run_operations_three(t_data *data, int i);
 int		run_operations_four(t_data *data, int i);
 int		run_operations_five(t_data *data, int i);
 int		run_operations_six(t_data *data, int i);
-void	free_all(t_data *data);
+void	handling_phew_args(t_data *data, int argc, char **argv);
+
 #endif

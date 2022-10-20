@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:48:06 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 21:46:18 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	choosing_t_or_b(t_data *data)
 	count = 0;
 	while (data->pos_b[i] != 0 && i < data->argc - 1)
 	{
-		if (data->pos_b[i] > data->top_marg + 4 * data->m_top && data->pos_b[i] <= data->top_marg + 4 * (data->m_top + 1))
+		if (data->pos_b[i] > data->top_marg + 4 * data->m_top && \
+		data->pos_b[i] <= data->top_marg + 4 * (data->m_top + 1))
 			count++;
 		if (count % 4 == 0 && count != 0)
 			break ;
@@ -42,11 +43,12 @@ int	choosing_top_or_bot(t_data *data)
 
 	j = 0;
 	count = 0;
-	if(data->nbrs_bot == 0)
+	if (data->nbrs_bot == 0)
 		return (100000);
 	while (data->pos_b[j] != 0 && j < data->argc - 1)
 	{
-		if (data->pos_b[j] < data->bot_marg - 4 * data->m_bot && data->pos_b[j] >= data->bot_marg - 4 * (data->m_bot + 1))
+		if (data->pos_b[j] < data->bot_marg - 4 * data->m_bot && \
+		data->pos_b[j] >= data->bot_marg - 4 * (data->m_bot + 1))
 			count++;
 		if (count % 4 == 0 && count != 0)
 			break ;

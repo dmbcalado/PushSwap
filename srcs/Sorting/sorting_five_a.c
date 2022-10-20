@@ -6,22 +6,22 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:07:23 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 00:53:09 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int find_bigger(int *a, int argc)
+int find_bigger(t_data *data)
 {
 	int	i;
 	int bigger;
 
 	i = -1;
 	bigger = 0;
-	while(a[++i] != 0 && i < argc - 1)
+	while(++i < 5)
 	{
-		if(a[i] > a[bigger])
+		if(data->pos_a[i] > data->pos_a[bigger])
 			bigger = i;
 	}
 	return (bigger);
@@ -32,7 +32,7 @@ void	sort_five_a(t_data *data)
 	int	value;
 	int	bigger;
 
-	bigger = find_bigger(data->pos_a, data->argc);
+	bigger = find_bigger(data);
 	value = data->pos_a[bigger];
 	if (bigger < 3)
 	{

@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:55:11 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/20 01:28:33 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ int	check_if_repeated(int argc, char **argv)
 	int	k;
 	
 	i = 0;
-	while (++i < argc)
+	while (++i < argc - 1)
 	{
 		j = -1;
 		while (++j < argc)
 		{
 			k = 0;
-			if (argv[i][k] == argv[j][k] && i != j)
+			if (argv[i][0] == argv[j][0] && i != j)
 				k = cont_how_many_equal(argv, i, j);
 			if (k == -10)
 				return (1);
@@ -81,24 +81,18 @@ int	check_if_all_legal_ints(int argc, char **argv)
 int	cont_how_many_equal(char **argv, int i, int j)
 {
 	int k;
-	int	k2;
 
-	k = 0;
-	k2 = 0;
-	if(i != j)
+	k = -1;
+	while(argv[i][++k])
 	{
-		while(argv[i][++k])
-		{
-			if (i == j || argv[i][k] != argv[j][k])
-				return (0);
-		}
-		while(argv[j][++k2])
-		{
-			if (i == j || argv[i][k2] != argv[j][k2])
-				return (0);
-		}
-		return (-10);
+		if (argv[i][k] != argv[j][k])
+			return (0);
 	}
-	else
-		return (0);
+	k = -1;
+	while(argv[j][++k])
+	{
+		if (argv[j][k] != argv[i][k])
+			return (0);
+	}
+	return (-10);
 }

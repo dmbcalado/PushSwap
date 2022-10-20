@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:06:01 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 22:24:44 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort_top_fourrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[0] > a[3]) // falta ver porque este caso 2 3 4 1 5
+	if (a[0] < a[1] && a[1] < a[2] && a[2] > a[3] && a[0] > a[3])
 	{
 		ra(data);
 		ra(data);
@@ -30,7 +30,7 @@ void	sort_top_fourrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] > a[3] && a[0] > a[3] && a[0] < a[2]) // caso 2 4 3 1 5
+	if (a[0] < a[1] && a[1] > a[2] && a[2] > a[3] && a[0] > a[3] && a[0] < a[2])
 	{
 		ra(data);
 		sa(data);
@@ -47,14 +47,14 @@ void	sort_top_fourrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] < a[3]) // caso 3 1 2 4 5
+	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] && a[0] < a[3])
 	{
 		sa(data);
 		ra(data);
 		sa(data);
 		rra(data);
 	}
-	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] < a[3]) // caso 3 2 1 4 5
+	else if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] < a[3])
 	{
 		sa(data);
 		ra(data);
@@ -70,7 +70,7 @@ void	sort_top_fourrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3]) // caso 3 4 1 2 5 
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3])
 	{
 		ra(data);
 		ra(data);

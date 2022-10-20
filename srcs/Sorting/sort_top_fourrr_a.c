@@ -6,7 +6,7 @@
 /*   By: dmendonc <dmendonc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 19:32:56 by dmendonc          #+#    #+#             */
-/*   Updated: 2022/10/19 18:34:47 by dmendonc         ###   ########.fr       */
+/*   Updated: 2022/10/19 22:25:40 by dmendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort_top_fourrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[2] && a[1] > a[3]) // caso 3 2 4 1 5
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[0] < a[2] && a[1] > a[3])
 	{
 		sa(data);
 		ra(data);
@@ -31,7 +31,7 @@ void	sort_top_fourrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[0] && a[2] > a[3]) // caso 3 4 2 1 5
+	if (a[0] < a[1] && a[1] > a[2] && a[2] < a[0] && a[2] > a[3])
 	{
 		ra(data);
 		ra(data);
@@ -49,7 +49,7 @@ void	sort_top_fourrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] &&  a[0] > a[3]) // caso 4 1 2 3 5
+	if (a[0] > a[1] && a[1] < a[2] && a[2] < a[3] &&  a[0] > a[3])
 	{
 		pb(data);
 		ra(data);
@@ -66,7 +66,7 @@ void	sort_top_fourrrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3] && a[1] < a[3]) // caso 4 2 1 3 5
+	if (a[0] > a[1] && a[1] > a[2] && a[2] < a[3] && a[0] > a[3] && a[1] < a[3])
 	{
 		pb(data);
 		sa(data);
@@ -83,7 +83,7 @@ void	sort_top_fourrrrrrrrrrrrr_a(t_data *data, int *a)
 
 void	sort_top_fourrrrrrrrrrrrrr_a(t_data *data, int *a)
 {
-	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] &&  a[0] > a[2]) // caso 4 1 3 2 5
+	if (a[0] > a[1] && a[1] < a[2] && a[2] > a[3] && a[1] < a[3] &&  a[0] > a[2])
 	{
 		pb(data);
 		ra(data);
