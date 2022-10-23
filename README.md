@@ -1,15 +1,24 @@
 <h1><em>Push Swap</em><strong><em> (grade : 90)</em></strong></h1>
 <div align="center"><br /><img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="400" height="200" /></div>
-<p><strong>This project has the goal of creating an algorithm that is step-efficcient into sorting a stack of integers (a) by only using  with rescrict </strong></p>
-<p><strong>Important: <p>To run the program you first need to install X11, XShm extension and libbsd-dev package, by typing in the terminal:</strong></p>
-<p><strong>sudo apt-get install gcc make xorg libxext-dev libbsd-dev</strong></p>
-<p><strong>After that, enter the folder mlx_linux and run ./configure</strong></p>
-<p>*This program is built to run on Linux and most of the utilities in MacOs will fail since the int sent by each key has a different value.*</p>
-<p>In the mandatory part, the task given is to have a program that would be able to:</p>
+<p><strong>This project has the goal of creating an algorithm that is step-efficcient into sorting a stack of integers (a) by using another stack (b) with a restrict set of rules on how to move the numbers between them.</strong></p>
+<p> So i'll start by explaining the rules and what they mean, then i'll explain the logical construction that driven my algorithm to reach sucess in doing so, and with a reasonable average number of steps. </p>
+<p></p>
+<p><strong><italic><center>1 - RULES :</center></italic></strong></p>
+<p>So at the start, we will receive the numbers as arguments passed as the following:
+<p><italic>./push_swap -43 23 1 0 54 43 (...)</italic></p>
+And the goal is to convert them to integers, put all in stack a and with an empty stack b, sort in ascending order the numbers into stack a. To do so, we have the following operations at our disposal:
 <ul style="list-style-type: square;">
-<li>Offer the option of the chosing both <strong>Mandelbot</strong> and <strong>Julia sets</strong>.</li>
-<li>Offer the option to zoom on mouse wheel.</li>
-<li>Be able to exit the program by pressing ESC or by clicking in the cross(x) in the window.</li>
+<li><strong>sa</strong> (swap a): Swap the first 2 elements at the top of stack a.</li>
+<li><strong>sb</strong> (swap b): Swap the first 2 elements at the top of stack b.</li>
+<li><strong>ss</strong> : sa and sb at the same time.</li>
+<li><strong>pa</strong> (push a): Take the first element at the top of b and put it at the top of a.</li>
+<li><strong>pb</strong> (push b): Take the first element at the top of a and put it at the top of b.</li>
+<li><strong>ra</strong> (rotate a): Shift up all elements of stack a by 1. The first element becomes the last one.</li>
+<li><strong>rb</strong> (rotate b): Shift up all elements of stack b by 1. The first element becomes the last one.</li>
+<li><strong>rr</strong> : ra and rb at the same time.</li>
+<li><strong>rra</strong> (reverse rotate a): Shift down all elements of stack a by 1. The last element becomes the first one.</li>
+<li><strong>rrb</strong> (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.</li>
+<li><strong>rrr</strong> : rra and rrb at the same time.</li>
 </ul>
 <p>So the way i aproached the problem is let the user choose by typing:</p>
 <p><strong>1 - $&gt; ./fractol mandelbrot</strong></p>
