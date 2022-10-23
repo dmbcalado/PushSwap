@@ -20,15 +20,17 @@ And the goal is to convert them to integers, put all in stack a and with an empt
 <li><strong>rrb</strong> (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.</li>
 <li><strong>rrr</strong> : rra and rrb at the same time.</li>
 </ul>
+We can see a draw I made representing each possible operation to grasp the rules even better:
+<div align="center"><br /><img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="800" height="200" /></div>
+<p><strong><italic><center>2 - LOGIC CONSTRUCTION :</center></italic></strong></p>
+<p>At the beginning, I must confess I felt kind of overwelmed. The first questions that come to your mind is how with this set of rules would i even sort the stack a.</p>
+<p>I cannot recall how many times i thought of a different solution, but first i had to know my limitations.
+Since I'm not a genius (at least at sorting algorithms (yet)) i thought "well, what is the nicest way I can brute force the best outcome for sorting X numbers. What is even X, how many numbers is it doable to brute force and not have 30 files of 5 functions (remember i have the Norm of 42 to respect). The number I came across was X = 4 since 5 would have been way to much possible solutions and 4 it is still doable. However, i had to understand that with this rules, the best way to sort 4 is different then the best way to sort 4 that are on top of a stack. And the solution to the best way to sort 4 could give a wrong outcome on 4 that were on top of a stack. Thats when i built the base of my sorting algorithm, a set of functions that would:</p>
 <p>So the way i aproached the problem is let the user choose by typing:</p>
 <p><strong>1 - $&gt; ./fractol mandelbrot</strong></p>
 <p><strong>2 - $&gt; ./fractol julia</strong></p>
 <p><strong>3 - $&gt;./fractol julia (<span style="color: #0000ff;">double</span> x) (<span style="color: #0000ff;"><em>double</em></span> y)</strong></p>
 <p><strong>4 - $&gt; ./fractol hourglass (a mathematical incorrect yet beautifull fractal I've created.)</strong></p>
-<p><strong>Results:</strong></p>
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/193884765-f578d346-c4f2-4c4f-9dfb-ac5cc841b6e6.png" width="630" height="600" /></div>
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/193886379-44997b70-9ac6-448c-957b-2be10803786e.png" width="600" height="600" /></div>
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/193886687-47013174-1cfa-48ac-b8c2-055083aefd46.png" width="600" height="600" /></div>
 <p>The first image shows the Mandelbrot set with 300 iterations. The second one, The Julia set with c = -0.78i with 300 iterations, and the third image is deep inside one Julia set choosed by the mouse click, once again with 300 iterations. </p>
 <p><strong>Some extra features I added:</strong></p>
 <ul style="list-style-type: square;">
