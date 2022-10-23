@@ -21,7 +21,7 @@ And the goal is to convert them to integers, put all in stack a and with an empt
 <li><strong>rrr</strong> : rra and rrb at the same time.</li>
 </ul>
 We can see a draw I made representing each possible operation to grasp the rules even better:
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="800" height="200" /></div>
+<div align="center"><br /><img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="1000" height="200" /></div>
 <p><strong><italic><center>2 - LOGIC CONSTRUCTION :</center></italic></strong></p>
 <p>At the beginning, I must confess I felt kind of overwelmed. The first questions that come to your mind is how with this set of rules would i even sort the stack a.</p>
 <p>I cannot recall how many times i thought of a different solution, but first i had to know my limitations.
