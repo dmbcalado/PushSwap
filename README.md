@@ -69,4 +69,4 @@ This is my algorithm basically. There were some future tunes that could be possi
 <li>rrb + sa + rra = sa + rrr</li>
 </ul>
 <p> By doing so, i end up with my stack a sorted with not too much steps. I got aproximatly 830 steps for the 100 numbers and aproximatly 64000 steps for the 500 numbers, wich gives me the grade of 4 out of 5 for both. The project doesn't have any leak or norm error also, the parsing is done accordingly also, so i got the grade of 90 out of 100 in this project.</p>
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/194442104-a2d55e31-9703-4c62-aa69-e91fd865dc4e.pn](https://user-images.githubusercontent.com/99777188/197428185-0b474962-53ba-4ff2-81c1-1cffe401a243.png" width="1000" height="230" /></div>
+<div align="center"><br /><img src="[https://user-images.githubusercontent.com/99777188/194442104-a2d55e31-9703-4c62-aa69-e91fd865dc4e.pn](https://user-images.githubusercontent.com/99777188/197428185-0b474962-53ba-4ff2-81c1-1cffe401a243.png](https://user-images.githubusercontent.com/99777188/197428185-0b474962-53ba-4ff2-81c1-1cffe401a243.png)" width="1000" height="230" /></div>
