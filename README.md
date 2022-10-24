@@ -48,9 +48,25 @@ This is my algorithm basically. There were some future tunes that could be possi
 <li>Sorting the top 4-stack on the top of pos_b along side with sorting the top 4-stack on the pos_a. This would create more situations of ra + rb = rr.</li>
 </ul>
 <p> So the only thing missing is to explain how to pass the steps made on the position stacks to the real a and b stacks. I do a list of indexs associated with every step:</p>
-
-<p> And very time i perform a new operation, i recreate the list of integers with 1 more int slot available to add the corresponding index of the operation.</p>
+<ul style="list-style-type: square;">
+<li>pb = -2</li>
+<li>pa = -1</li>
+<li>ra = 1</li>
+<li>rb = 2</li>
+<li>rra = 3</li>
+<li>rrb = 4</li>
+<li>sa = 5</li>
+<li>sb = 6</li>
+</ul>
+<p> And every time i perform a new operation, i recreate the list of integers with 1 more int slot available to add the corresponding index of the operation.</p>
 <p> Now while running, i can find this patterns and reduce them to smaller cases:</p>
-
+<ul style="list-style-type: square;">
+<li>ra + rb or rb + ra = rr</li>
+<li>rra + rrb or rrb + rra = rrr</li>
+<li>ra + sb + rb = sb + rr</li>
+<li>rb + sa + ra = sa + rr</li>
+<li>rra + sb + rrb = sb + rrr</li>
+<li>rrb + sa + rra = sa + rrr</li>
+</ul>
 <p> By doing so, i end up with my stack a sorted with not too much steps. I got aproximatly 830 steps for the 100 numbers and aproximatly 64000 steps for the 500 numbers, wich gives me the grade of 4 out of 5 for both. The project doesn't have any leak or norm error also, the parsing is done accordingly also, so i got the grade of 90 out of 100 in this project.</p>
 <div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/194442104-a2d55e31-9703-4c62-aa69-e91fd865dc4e.png" width="800" height="230" /></div>
