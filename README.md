@@ -20,8 +20,8 @@ And the goal is to convert them to integers, put all in stack a and with an empt
 <li><strong>rrb</strong> (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.</li>
 <li><strong>rrr</strong> : rra and rrb at the same time.</li>
 </ul>
-We can see a draw I made representing each possible operation to grasp the rules even better:
-<div align="center"><br /><img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="800" height="200" /></div>
+We can see a draw I made representing the possible operations on stack a (the same operations are the ones allowed on stack b) to grasp the rules even better:
+<div align="center"><br /><img src="https://user-images.githubusercontent.com/99777188/197455541-f4c8ba81-38bb-43eb-8b33-df7d56a93d46.png" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="800" height="200" /></div>
 <p><strong><italic><center>2 - LOGIC CONSTRUCTION :</center></italic></strong></p>
 <p>At the beginning, I must confess I felt kind of overwelmed. The first questions that come to your mind is how with this set of rules would i even sort the stack a.</p>
 Since I'm not a genius (at least at sorting algorithms (yet)) i thought "well, what is the nicest way I can brute force the best outcome for sorting X numbers. What is even X, how many numbers is it doable to brute force and not have 30 files of 5 functions (remember i have the Norm of 42 to respect). The number I came across was X = 4 since 5 would have been way to much possible solutions and 4 it is still doable. However, i had to understand that with this rules, the best way to sort 4 is different then the best way to sort 4 that are on top of a stack. And the solution to the best way to sort 4 could give a wrong outcome on 4 that were on top of a stack. Thats when i built the base of my sorting algorithm, a set of functions that would:</p>
